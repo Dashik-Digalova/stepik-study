@@ -2,8 +2,8 @@ import json
 from random import shuffle
 
 from flask import render_template, request
-from forms import BookingForm, RequestForm
-from models import Teacher, Booking, Request
+from .forms import BookingForm, RequestForm
+from .models import Teacher, Booking, Request
 from stepik_study import app, db
 
 

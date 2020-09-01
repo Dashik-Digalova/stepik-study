@@ -1,14 +1,7 @@
-from flask import Flask
-from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from .config import Config
 
 
-app = Flask(__name__)
-app.config.from_object(Config)
-
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+db = SQLAlchemy()
 
 
 class Teacher(db.Model):
@@ -43,5 +36,4 @@ class Request(db.Model):
     teacher = db.Column(db.Integer, db.ForeignKey("teachers.id"))
 
 
-db.create_all()
 

@@ -34,7 +34,7 @@ def index():
     return output
 
 
-@app.route("/goals/<goal>")
+@app.route("/goals/<goal>/")
 def goals_page(goal):
     teachers = db.session.query(Teacher).all()
     goals = read_file('goals.json')

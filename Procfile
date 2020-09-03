@@ -1,1 +1,1 @@
-web: gunicorn stepik_study.app:app
+web: gunicorn stepik_study:app
